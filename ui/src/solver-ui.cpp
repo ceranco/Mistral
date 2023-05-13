@@ -993,7 +993,7 @@ void init_solve_elements(Glib::RefPtr<Gnome::Glade::Xml> &refXml) {
   level_combobox->set_model(f_refTreeModel);
   level_combobox->pack_start(option_columns.col_id);
 
-  for (int i = 0; i < (int)(sizeof(levels) / sizeof(string *)); i++) {
+  for (int i = 0; i < (int)(sizeof(levels) / sizeof(string)); i++) {
     Gtk::TreeModel::Row row = *(f_refTreeModel->append());
     row[option_columns.col_id] = levels[i];
   }
